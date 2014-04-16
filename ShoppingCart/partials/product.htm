@@ -21,17 +21,18 @@
                 </tr>
 
                 <tr>
-                    <td class="tdRight"><b>Calories</b></td>
-                    <td class="tdCenter"><h2>{{product.cal}}</h2></td>
-                    <td />
+                    <td class="tdRight"><b>Sizes</b></td>
+                    <td class="tdRight"><b>Colors</b></td>
                 </tr>
-                <tr ng-repeat="(nutrientName, nutrientValue) in product.nutrients">
-                    <td class="tdRight"><b>{{nutrientName}}</b></td>
-                    <td class="tdCenter"><img ng-src="img/r{{nutrientValue}}.png" alt="{{nutrientValue}}" /></td>
+                <tr >
+                    <td class="tdRight">
+                     <select data-ng-model="product.sizes"
+                        data-ng-options="size for size in product.sizes">               
+                    </select></td>
                     <td>
-                        <b>{{store.dvaCaption[nutrientValue]}}</b>:
-                        {{store.dvaRange[nutrientValue]}}
-                        of the recommended daily value.
+                     <select data-ng-model="product.colors"
+                        data-ng-options="size for size in product.colors">               
+                    </select></td>
                     </td>
                 </tr>
 
