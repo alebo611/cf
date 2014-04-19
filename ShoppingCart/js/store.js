@@ -12,7 +12,7 @@
 function store() {
     this.products = [
         new product("SK1", "Jumbo", "Pork in new shoes", 100,  [20,21,25,26,27],["blue","green"]),
-        new product("SK2", "Mambo", "Great", 200, [20,21,25,26,27],["blue","green"])
+        new product("SK2", "Mambo", "Great", 200, [19,26,27,33,36],["violet","pink"])
     ];
 }
 store.prototype.getProduct = function (sku) {

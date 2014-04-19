@@ -28,7 +28,7 @@
 
                 <!-- cart items -->
                 <tr ng-repeat="item in cart.items | orderBy:'name'">
-                    <td>{{item.name}}</td>
+                    <td>{{item.name}}<br>{{item.size}}<br>{{item.color}}</td>
                     <td class="tdCenter">
                       <div class="input-append">
                         <!-- use type=tel instead of  to prevent spinners -->

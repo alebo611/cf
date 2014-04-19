@@ -12,5 +12,7 @@ function storeController($scope, $routeParams, DataService) {
     // use routing to pick the selected product
     if ($routeParams.productSku != null) {
         $scope.product = $scope.store.getProduct($routeParams.productSku);
+        $scope.chosenSize = $scope.product.sizes[0];
+        $scope.chosenColor = $scope.product.colors[0];
     }
 }
