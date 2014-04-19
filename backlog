@@ -5,3 +5,6 @@ Ordna ned-räkning i lager
 Språkstöd för kinesika, svenska, engelska
 Stöd för olika pengar: dollar, euro, yuan, kronor
 refactoring: flytta färgkodningen till egen service
+Sorteringslista till vänster
+tre bilder per rad
+bilderna är länkar till enskild vy
