@@ -15,4 +15,34 @@ function storeController($scope, $routeParams, DataService) {
         $scope.chosenSize = $scope.product.sizes[0];
         $scope.chosenColor = $scope.product.colors[0];
     }
+
+    var chosenLang=localStorage['language']
+
+    if (chosenLang){
+        if(chosenLang=='swedish'){
+            $scope.lang=swedish;
+        }
+        if(chosenLang=='english'){
+            $scope.lang=english;
+        }
+        if(chosenLang=='chinese'){
+            $scope.lang=chinese;
+        }
+    }
+    else {
+        $scope.lang=swedish;
+    }
+
+    $scope.changeLanguage = function(language) {
+        if(language=='swedish'){
+            this.lang=swedish;
+        }
+        if(language=='english'){
+            this.lang=english;
+        }
+        if(language=='chinese'){
+            this.lang=chinese;
+        }
+        localStorage['language']=language;
+    };
 }
