@@ -1,7 +1,7 @@
 var swedish = {welcome:'Välkommen',
                 description:'Detta är en produkt',
                 search:'Sök',
-                madicken:'Madicken svenska',
+                madicken:'Sommarballerina i härliga färgkombinationer. Ovanläder i svenskt vegetabilgarvat skinn helt utan skadliga tillsatser. Justerbar kardborreknäppning och fotriktig läst gör att skon passar de allra flesta fötter. Invändigt förstärkt både fram i tån och bak i hälen. Urtagbar innersula i skinn, underliggande och stöttdämpande mellansula och yttersula med bra grepp och avrullning. Certifierad med EU eco-label',
                 mimer:'Mimer svenska'
 };
 var english = {welcome:'Welcome',
