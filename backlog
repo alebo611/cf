@@ -1,7 +1,10 @@
 bildförstoringar
 små underbilder i enskild vy
 lösenord för adminsidor
-anropa rest från webshop
+lägg in produktlista i backend
+lägg in färgtabell i backend
+generera vyn från all data i backend
+lägg in ny produkt med bilder osv.
 Ordna ned-räkning i lager
 valutakurser
 refactoring: flytta färgkodningen till egen service eller till nåt annat BRA ställe
