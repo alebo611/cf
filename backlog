@@ -1,9 +1,10 @@
 bildförstoringar
 små underbilder i enskild vy
-Ordna riktig databas (REST)
+lösenord för adminsidor
+anropa rest från webshop
 Ordna ned-räkning i lager
-Stöd för olika pengar: dollar, euro, yuan, kronor
-refactoring: flytta färgkodningen till egen service
+valutakurser
+refactoring: flytta färgkodningen till egen service eller till nåt annat BRA ställe
 Sorteringslista till vänster
 tre bilder per rad
 bilderna är länkar till enskild vy

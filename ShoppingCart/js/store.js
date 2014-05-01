@@ -9,7 +9,27 @@
 // 3: 20-40% DV
 // 4: above 40% DV
 //
-function store() {
+function store($http) {
+
+
+    $http({method: 'GET', url: '/cakephp/shoes/getAllForSale.json'}).
+    success(function(data, status, headers, config) {
+        this.shoes = data;
+        for( s in data['shoes']){
+                $name=data['shoes'][s]['shoes']['name'];
+                $color=data['shoes'][s]['shoes']['color'];
+                $size=data['shoes'][s]['shoes']['size'];
+            }
+      // this callback will be called asynchronously
+      // when the response is available
+    }).
+    error(function(data, status, headers, config) {
+      // called asynchronously if an error occurs
+      // or server returns response with an error status.
+    });
+    
+
+
     this.products = [
         new product("99841", "Madicken", 'madicken', 649,  [20,21,25,26,27],["yellow","cerise","green","blue","red"]),
         new product("93541", "Mimer", 'mimer', 699, [19,26,27,33,36],["brown","blue","red"])
