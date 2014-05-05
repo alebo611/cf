@@ -24,27 +24,76 @@
             </a>
         </td>
     </tr>
-    <tr ng-repeat="product in store.products | orderBy:'name' | filter:search" >
-        <td class="tdCenter"><img ng-src="img/products/{{product.name}}-{{product.sku}}-{{product.colorCodes[product.colors[0]]}}-{{product.colors[0]}}.png" alt="{{product.name}}" /></td>
-        <td>
-            <a href="#/products/{{product.sku}}"><b>{{product.name}}</b></a><br />
-            {{product.description}}
-        </td>
-        <td class="tdRight">
-            {{product.price | currency:lang.currency}}
-            
-        </td>
-        <td class="tdCenter">
-            add to cart disabled
-            </a>
-        </td>
-    </tr>
-    <tr class="well">
-        <td class="tdRight" colspan="4">
-            <a href="default.htm#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
-                <i class="icon-shopping-cart" />
-                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
-            </a>
-        </td>
-    </tr>
 </table>
+
+<div ng-repeat="product in store.products | orderBy:'name' | filter:search" class="prod_outer_3">
+<div class="prod_inner">
+<div class="itemname">
+<a id="art_50341_D22302" class="itemnamelink" href="#/products/{{product.sku}}">{{product.name}}</a>
+</div>
+<div class="images">
+<a href="#/products/{{product.sku}}">
+    <a href="/sv/Vessla?id=50341">
+    <img class="image_itam" title="{{product.name}}" ng-src="img/prod100/{{product.name}}-{{product.sku}}-{{product.colorCodes[product.colors[0]]}}-{{product.colors[0]}}.png" alt="{{product.name}}" />
+    </a>
+</div>
+<div class="price_outer">
+<div class="price_inner">
+<div class="price_inner_inner">
+<div class="item_price">
+<span class="label">Pris</span>
+<span id="art_50341_D10003" class="price">{{product.price | currency:lang.currency}}</span>
+</div>
+</div>
+<a class="button_choose" href="#/products/{{product.sku}}">Välj</a>
+</div>
+</div>
+<div class="item_text">
+Finns i flera färger
+<br>
+Stl. 19-26
+</div>
+</div>
+</div>
+
+
+<div>
+<div class="listview_row_outer">
+<div class="listview_row_inner">
+<div class="prod_outer_3">
+<div class="prod_outer_3">
+<div class="prod_inner">
+<div class="itemname">
+<a id="art_93541_D22302" class="itemnamelink" href="/sv/Mimer?id=93541">Mimer</a>
+</div>
+<div class="itemcode">
+<input id="ItemLink_1" type="hidden" value="/sv/Mimer?id=93541" title="Läs mer" name="ctl00$MainContent$view$WindowView$ItemLink_1">
+<div class="images">
+<div class="price_outer">
+<div class="outer_info">
+<div class="item_rating">
+<div class="item_text">
+</div>
+</div>
+<div class="prod_outer_3">
+</div>
+</div>
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+<div class="listview_row_outer">
+</div>
+
+
+
