@@ -1,0 +1,20 @@
+@charset "UTF-8";.table{margin:10px 0 0;border:1px solid #666;border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;float:none;display:table;background-color:#dcdcdc}
+.table .header{display:table-row}
+.table .header>.cell{border-left:1px solid #ccc;border-bottom:1px solid #666;vertical-align:top;font-weight:bold;padding-top:.2em;padding-bottom:.2em}
+.table .header>.cell:first-child{padding-right:.5em;padding-left:.5em;border-radius:5px 0 0 0;-moz-border-radius:5px 0 0 0;-webkit-border-radius:5px 0 0 0}
+.table .header>.cell:last-child{border-radius:0 5px 0 0;-moz-border-radius:0 5px 0 0;-webkit-border-radius:0 5px 0 0}
+.table .cell{color:#000;display:table-cell;padding:.3em .4em .3em .7em;font-size:11px;vertical-align:middle}
+.table .row{display:table-row;margin:0 .25em}
+.table .row:nth-child(odd){background:#efefef}
+.table .row:nth-child(even){background:#fff}
+.table>.row div[onclick]{cursor:pointer}
+.table .cell input[type="text"]{height:16px;margin:2px 0}
+.table .numeric{white-space:nowrap;text-align:right}
+.table .numeric>input{text-align:right;width:2em}
+.table .hidden{visibility:hidden;display:none}
+.table .hastext{color:#f00;position:relative;height:70px}
+.table .hastext .cell{vertical-align:top;padding-top:1.5em}
+.table .hastext .cell.image{padding-top:.5em}
+.table .RowText{display:block;white-space:normal;font-weight:normal;text-decoration:none;padding-top:3px}
+.table .RowText span{text-decoration:none}
+.expressOrder .table .numeric>input{width:5em}

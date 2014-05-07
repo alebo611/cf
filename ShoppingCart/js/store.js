@@ -31,7 +31,7 @@ function store($http) {
 
 
     this.products = [
-        new product("99841", "Madicken", 'madicken', 649,  [20,21,25,26,27],["yellow","cerise","green","blue","red"]),
+        new product("99841", "Madicken", 'madicken', 649,  [20,21,25,26,27],["green","cerise","yellow","blue","red"]),
         new product("93541", "Mimer", 'mimer', 699, [19,26,27,33,36],["brown","blue","red"])
     ];
 }

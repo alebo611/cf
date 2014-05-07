@@ -1,0 +1,25 @@
+@charset "UTF-8";.lay_basket{float:left;background-color:#fff;border-width:1px;border-style:solid;border-bottom-color:#aaa;border-right-color:#aaa;border-top-color:#ddd;border-left-color:#ddd;border-radius:7px;-moz-border-radius:7px;-webkit-border-radius:7px;box-shadow:3px 3px 5px #aaa;-moz-box-shadow:3px 3px 5px #aaa;-webkit-box-shadow:3px 3px 5px #aaa}
+.smallcart{width:500px;height:auto;display:none;position:absolute;right:0;top:60px}
+.cartquantity{font-size:10px;color:#666}
+.cart_header{position:relative;padding:4px;color:#000;background-image:url("/Images/site/carticon.png");background-repeat:no-repeat;background-position:5px center;background-size:40px 40px}
+.smallcart_outer{background-color:#efefef;border:1px solid #ccc;border-radius:7px;-moz-border-radius:7px;-webkit-border-radius:7px;padding:3px 7px 0}
+.smallcart_inner{display:table;margin:2px auto;border-spacing:0 2px;border-collapse:separate;width:100%}
+.smallcart_inner .row{background-color:white;color:#000;display:table-row;margin-top:2px}
+.smallcart_inner .row a{color:#000}
+.smallcart_inner .row .cell{clear:both;display:inline;padding:.3em;display:table-cell;vertical-align:top}
+.smallcart_inner .row .cell .artcode{font-size:10px;color:#666}
+.smallcart_inner .row .cell .artname{font-weight:bold}
+.smallcart_inner .row .remove{width:10px}
+.smallcart_inner .row .cell.numeric{text-align:right}
+.smallcart_inner .row .pic{width:40px;height:45px;padding-left:.3em;padding-right:.5em;text-align:center;vertical-align:middle}
+.headerinfo{padding-left:46px;display:inline-block}
+.tocheckout{padding-left:10px;margin-left:10px;display:inline-block;background-image:url("/Images/site/down.png");background-repeat:no-repeat;background-position:left center}
+.smallcart .footer{display:inline-block;color:#666;padding:4px 0 8px 6px;width:100%;background:none repeat scroll 0 0 transparent}
+.smallcart .footer .checkout{display:inline;position:relative;left:-4px}
+.smallcart .footer .totalinfo{float:right;padding-right:15px}
+.smallcart .footer .totalinfo>div{display:table-row;clear:both}
+.smallcart .footer .totalinfo .totalcosttext,.smallcart .footer .totalinfo .sum{display:table-cell;text-align:right}
+.smallcart .footer .totalinfo .totalcosttext{padding-right:1em}
+.smallcart .footer .quantitytext,.smallcart .footer .quantity,.smallcart .footer .totalcost,.smallcart .footer .totalcosttext{padding-right:4px}
+#pnlCart.fixed{position:fixed;top:0}
+.priceinfo{padding-left:46px;color:#666;font-size:9px}

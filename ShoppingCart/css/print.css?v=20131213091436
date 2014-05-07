@@ -1,0 +1,5 @@
+@charset "UTF-8";@media print{html,body{font-size:11px;margin:0 .5cm;background-color:#fff;color:#000}
+#lay_breadcrumb,#lay_cross_selling,#lay_columnwrapper,#lay_banner,#lay_basket,#list_settings{display:none}
+#lay_megawrapper,#lay_header,#lay_contentwrapper,#lay_center_0,#lay_center_1,#lay_center_2,#lay_center_3,#lay_mainwrapper,#lay_main,#lay_footer{width:100%;margin:0;padding:0;clear:both;float:left}
+.lay_header .logo{clear:both;display:block;float:none;position:relative;height:auto}
+}

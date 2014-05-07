@@ -1,0 +1,18 @@
+.comboBox{float:left;position:relative}
+.comboBoxLabel{float:left;margin:2px 5px 0 0}
+.comboBoxTextBox{float:left;height:18px;border:1px solid #ccc;border-right:0 none;margin:0 0 3px 0}
+.comboBoxButton{float:left;height:20px;border:1px solid #ccc;border-left:0 none;background:#efefef no-repeat;background-position:50%;cursor:pointer;width:16px}
+.comboBoxButton img{margin-top:2px}
+.comboBoxDataContainer{border:1px solid #ccc;background-color:#FFF;position:fixed;min-width:217px;margin-right:-17px;max-height:250px;overflow-y:scroll;overflow:auto;z-index:900}
+.comboBoxData{display:table;white-space:nowrap;width:100%;z-index:10}
+.comboBoxData .header{display:table-row;height:16px;background:#dcdcdc;border:0}
+.comboBoxData .header div{display:table-cell;padding:1px 5px 2px 5px;font:bold 12px Arial;cursor:default}
+.comboBoxData .row{display:table-row;cursor:pointer}
+.comboBoxData .row div{display:table-cell;padding:1px 5px 2px 5px;font:normal 11px Verdana}
+.comboBoxData .row:nth-child(even){background:#fff}
+.comboBoxData .row:nth-child(odd){background:#efefef}
+.comboBoxData .selected:nth-child(n)>div{font-weight:bold}
+.comboBoxData .row:hover{color:#000;background-color:#ccc}
+.comboBoxData .hover:nth-child(n){background:#ccc}
+.comboBoxData .header .hidden,.comboBoxData .row .hidden{display:none}
+.disabled span{color:#ccc}
