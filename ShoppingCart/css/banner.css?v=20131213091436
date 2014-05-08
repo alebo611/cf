@@ -1,6 +1,0 @@
-@charset "UTF-8";.lay_banner{position:relative;border-top:1px solid #efefef;padding-top:10px}
-#lay_banner .bannerTitle{position:absolute;top:2px;left:6px;color:#dbdbdb;font-size:9px;text-transform:uppercase}
-.lay_banner div img{border:0}
-.lay_banner #banners{padding-top:.5em}
-.lay_banner #banners:after{content:"";visibility:hidden;display:block;height:0;clear:both}
-.lay_banner .bannerbox{float:left;padding:0 .5em .5em}

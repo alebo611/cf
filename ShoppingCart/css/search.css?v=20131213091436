@@ -1,3 +1,0 @@
-@charset "UTF-8";.lay_search input[type='text']{background-color:#fefefe;border:1px solid #dbdbdb;border-radius:3px 0 0 3px;-moz-border-radius:3px 0 0 3px;-webkit-border-radius:3px 0 0 3px;height:20px;width:130px;color:#666;padding:0 0 0 .4em;font-size:1.2em}
-.lay_search .textBox{display:inline;float:left}
-.lay_search input[type='image']{height:18px;padding:1px 1px 1px 3px;float:left;background-color:#fff;border:1px solid #dbdbdb;border-left:0 none;margin-left:-1px;border-radius:0 3px 3px 0;-moz-border-radius:0 3px 3px 0;-webkit-border-radius:0 3px 3px 0}

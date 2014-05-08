@@ -12,3 +12,32 @@
    width: auto;
 }
 
+
+.list-row {
+    background:#f4f4f4;
+    display:inline-block;
+    border:2px solid red;}
+
+.list-top {
+    width:auto;
+    padding:10px;
+    float:top;
+    border: 2px solid blue;}
+
+.list-left {
+    width:auto;
+    padding:10px;
+    float:left;
+    border: 2px solid blue;}
+
+.list-right {
+    padding:10px;
+    float:right;
+    border:2px solid green;}
+
+.list-title {
+    font-size:18px;
+    padding:8px;}
+
+.list-filters { padding:8px; }
+

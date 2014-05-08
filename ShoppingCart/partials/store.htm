@@ -26,7 +26,6 @@
     </tr>
 </table>
 
-<div ng-repeat="product in store.products | orderBy:'name' | filter:search" class="prod_outer_3">
 <div class="prod_inner">
 <div class="itemname">
 <a id="art_50341_D22302" class="itemnamelink" href="#/products/{{product.sku}}">{{product.name}}</a>
@@ -34,7 +33,6 @@
 <div class="images">
 <a href="#/products/{{product.sku}}">
     <a href="/sv/Vessla?id=50341">
-    <img class="image_item" title="{{product.name}}" ng-src="img/prod100/{{product.name}}-{{product.sku}}-{{product.colorCodes[product.colors[0]]}}-{{product.colors[0]}}.png" alt="{{product.name}}" />
     </a>
 </div>
 <div class="price_outer">
@@ -57,43 +55,15 @@ Stl. 19-26
 </div>
 
 
-<div>
-<div class="listview_row_outer">
-<div class="listview_row_inner">
-<div class="prod_outer_3">
-<div class="prod_outer_3">
-<div class="prod_inner">
-<div class="itemname">
-<a id="art_93541_D22302" class="itemnamelink" href="/sv/Mimer?id=93541">Mimer</a>
-</div>
-<div class="itemcode">
-<input id="ItemLink_1" type="hidden" value="/sv/Mimer?id=93541" title="Läs mer" name="ctl00$MainContent$view$WindowView$ItemLink_1">
-<div class="images">
-<div class="price_outer">
-<div class="outer_info">
-<div class="item_rating">
-<div class="item_text">
-</div>
-</div>
-<div class="prod_outer_3">
-</div>
-</div>
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-<div class="listview_row_outer">
-</div>
 
-
-
+<div ng-repeat="product in store.products | orderBy:'name' | filter:search" class="list-row">
+ 
+    <div class="list-top">
+    <img class="image_item" title="{{product.name}}" ng-src="img/prod100/{{product.name}}-{{product.sku}}-{{product.colorCodes[product.colors[0]]}}-{{product.colors[0]}}.png" alt="{{product.name}}" />
+    </div>
+ 
+    <div class="list-left">
+        <div class="list-title">CELL2</div>
+        <div class="list-filters">CELL3
+    </div>
+</div>
