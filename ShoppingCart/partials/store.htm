@@ -26,36 +26,6 @@
     </tr>
 </table>
 
-<div class="prod_inner">
-<div class="itemname">
-<a id="art_50341_D22302" class="itemnamelink" href="#/products/{{product.sku}}">{{product.name}}</a>
-</div>
-<div class="images">
-<a href="#/products/{{product.sku}}">
-    <a href="/sv/Vessla?id=50341">
-    </a>
-</div>
-<div class="price_outer">
-<div class="price_inner">
-<div class="price_inner_inner">
-<div class="item_price">
-<span class="label">Pris</span>
-<span id="art_50341_D10003" class="price">{{product.price | currency:lang.currency}}</span>
-</div>
-</div>
-<a class="button_choose" href="#/products/{{product.sku}}">Välj</a>
-</div>
-</div>
-<div class="item_text">
-Finns i flera färger
-<br>
-Stl. 19-26
-</div>
-</div>
-</div>
-
-
-
 <div ng-repeat="product in store.products | orderBy:'name' | filter:search" class="list-row">
  
     <div class="list-top">
