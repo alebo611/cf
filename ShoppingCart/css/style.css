@@ -20,20 +20,29 @@
 
 .list-top {
     width:auto;
-    padding:10px;
+    padding:0px;
     float:top;
-    border: 2px solid blue;}
+    border: 1px solid blue;}
 
 .list-bottom {
     width:auto;
     padding:0px;
     float:bottom;
-    border: 2px solid blue;}
+    border: 0px;}
 
 .list-right {
-    padding:10px;
+    padding:0px;
     float:right;
-    border:2px solid green;}
+    border:0px ;
+    width:50%;
+    
+    }
+
+.list-left {
+    padding:0px;
+    float:left;
+    width:50%;
+    border:0px;}
 
 .list-title {
     font-size:18px;
