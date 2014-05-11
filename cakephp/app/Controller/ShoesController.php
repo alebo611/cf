@@ -23,17 +23,28 @@ class ShoesController extends AppController {
     }
 
     public function getAllForSale($name=null) {
-            /* always keep a buffer in the stock to prevent somebody from order out of stock items 1 */
-            $limit=2;
-            
-            if(!$name){
-               $this->set('shoes', $this->Shoe->query("SELECT name,color,size FROM shoes where in_stock > $limit;"));
-            }
-            else {
-               $this->set('shoes', $this->Shoe->query("SELECT color,size FROM shoes where name = '$name' AND in_stock > $limit;"));
-            }
-           $this->set('_serialize', array('shoes'));
+        /* always keep a buffer in the stock to prevent somebody from order out of stock items 1 */
+        $limit=2;
+        
+        if(!$name){
+           $this->set('shoes', $this->Shoe->query("SELECT name,color,size FROM shoes where in_stock > $limit;"));
+        }
+        else {
+           $this->set('shoes', $this->Shoe->query("SELECT color,size FROM shoes where name = '$name' AND in_stock > $limit;"));
+        }
+       $this->set('_serialize', array('shoes'));
 
+    }
+
+    public function getSizesForColor($color=null){
+
+        if (!$color) {
+            throw new NotFoundException(__('Invalid color'));
+        
+       $this->set('shoes', $this->Shoe->query("SELECT size FROM shoes where color = '$color';"));
+        
+        
+        }
     }
 
 

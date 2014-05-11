@@ -26,18 +26,26 @@
     </tr>
 </table>
 
-<div ng-repeat="product in store.products | orderBy:'name' | filter:search" class="list-row">
+<div ng-repeat="product in store.products | orderBy:'name' | filter:search" class="list-row listview_window list_view">
  
+    <div class="prod_outer_3">
+    <div class="prod_inner">
     <div class="list-top">
-    <a href="#/products/{{product.sku}}">
-        <img class="image_item" title="{{product.name}}" ng-src="img/prod100/{{product.name}}-{{product.sku}}-{{product.colorCodes[product.colors[0]]}}-{{product.colors[0]}}.png" alt="{{product.name}}" />
-    </a>
+        <div class="images">
+        <a href="#/products/{{product.sku}}">
+            <img class="image_item" title="{{product.name}}" ng-src="img/prod100/{{product.name}}-{{product.sku}}-{{product.colorCodes[product.colors[0]]}}-{{product.colors[0]}}.png" alt="{{product.name}}" />
+        </a>
+
+
+        </div>
     </div>
  
     <div class="list-bottom">
         <div class="list-top">
             <div class="list-left">
+                <div class="itemname">
                 <a id="art_50341_D22302" class="itemnamelink" href="#/products/{{product.sku}}">{{product.name}}</a>
+                </div>
             </div>
             <div class="list-right">
                 <p>has colors </p>
@@ -48,9 +56,11 @@
             <span class="price">{{product.price | currency:lang.currency}}</span>
             </div>
             <div class="list-right">
-                <a class="button_choose" href="#/products/{{product.sku}}">Välj</a>
+                <a class="button choose" href="#/products/{{product.sku}}">Välj</a>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 </div>
 

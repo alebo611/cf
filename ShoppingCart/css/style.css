@@ -13,16 +13,27 @@
 }
 
 
+.list-item {
+    padding:20px;
+    
+}
+
 .list-row {
     background:#f4f4f4;
     display:inline-block;
-    border:2px solid red;}
+    border:0px;}
 
 .list-top {
     width:auto;
     padding:0px;
     float:top;
-    border: 1px solid blue;}
+    border: 1px solid black;}
+
+.list-bottom .list-top {
+    width:auto;
+    padding:0px;
+    float:top;
+    border: 0px solid black;}
 
 .list-bottom {
     width:auto;
@@ -51,32 +62,92 @@
 .list-filters { padding:8px; }
 
 
-    .Table
-    {
-        display: table;
+/* kavat specific */
+
+.listview_window .image_item {
+    max-height: 137px;
+    max-width: 200px;
+}
+.image_item {
+    max-height: 137px;
+    max-width: 200px;
+    padding:10px;
+}
+.prod_item .image_item{padding:0 0 2em 0}
+
+.price{
+   font-weight: bold; 
+   float: none;
+    font-family: 'Oswald',sans-serif;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    color: #000;
     }
-    .Title
-    {
-        display: table-caption;
-        text-align: center;
-        font-weight: bold;
-        font-size: larger;
-    }
-    .Heading
-    {
-        display: table-row;
-        font-weight: bold;
-        text-align: center;
-    }
-    .Row
-    {
-        display: table-row;
-    }
-    .Cell
-    {
-        display: table-cell;
-        border: solid;
-        border-width: thin;
-        padding-left: 5px;
-        padding-right: 5px;
+
+.list_view .itemname a {
+    text-decoration: none;
+    color: #000;
+}
+
+.listview_window .itemname {
+    font-family: 'Oswald',sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.listview_window .itemname, .listview_extended .itemname {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.list_view .itemname a:hover {
+    text-decoration: underline;
+        -moz-text-decoration-color: -moz-use-text-color;
+        -moz-text-decoration-line: underline;
+        -moz-text-decoration-style: solid;
+}
+
+.buy, .button, .btnCheckout, #checkoutWrapper .minisectionNew .regLink a, #btnComplete, #checkoutWrapper .btnSendOrder, #checkoutWrapper .btnPayAndSendOrder, #checkoutWrapper .btnKlarnaSendOrder {
+    background: none repeat scroll 0% 0% rgb(81, 70, 82) !important;
+    border: medium none !important;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 9px 40px !important;
+    box-shadow: 0px 0px 0px rgb(0, 0, 0) !important;
+    border-radius: 0px !important;
+    font-family: 'Oswald',sans-serif;
+    font-weight: bold;
+    font-size: 12px !important;
+    color: #FFF;
+    text-decoration: none;
+    text-shadow: none !important;
+}
+
+.listview_window .prod_outer_3 .price_inner > .button.choose, .listview_window .prod_outer_3 .price_inner .button.buy {
+    display: block !important;
+    width: auto;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+
+.listview_window .prod_outer_3 {
+    width: 220px;
+    margin: 8px 18px 0px 1px;
+}
+
+.listview_window .prod_inner {
+    height: 254px;
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.images {
+    width:210
+    height:150
+    position:relative
     }
