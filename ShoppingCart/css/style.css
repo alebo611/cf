@@ -29,17 +29,29 @@
     float:top;
     border: 1px solid black;}
 
-.list-bottom .list-top {
+.list-bottom {
+    display:block;
+    height:30%;
     width:auto;
     padding:0px;
     float:top;
     border: 0px solid black;}
 
-.list-bottom {
+.list-top-inner {
+    display:block;
+    height:35px;
+    width:auto;
+    padding:0px;
+    float:top;
+    border: 0px solid black;}
+
+.list-bottom-inner {
+    display:block;
+    height:50px;
     width:auto;
     padding:0px;
     float:bottom;
-    border: 0px;}
+    border: 1px;}
 
 .list-right {
     padding:0px;
@@ -53,7 +65,7 @@
     padding:0px;
     float:left;
     width:50%;
-    border:0px;}
+    border:1px;}
 
 .list-title {
     font-size:18px;
@@ -138,7 +150,7 @@
 }
 
 .listview_window .prod_inner {
-    height: 254px;
+    height: 220px;
     padding: 0px;
     margin: 0px;
     text-align: left;
@@ -151,3 +163,14 @@
     height:150
     position:relative
     }
+
+.listview_window .item_text {
+    font-size: 10px;
+    padding: 0px 0px 0px 23px;
+    position: relative;
+    top: 4px;
+    float: right;
+    text-align: right;
+    background: url('/ShoppingCart/img/colors.png') no-repeat scroll 0% 0% / 18px 7px transparent;
+    line-height: 10px;
+}

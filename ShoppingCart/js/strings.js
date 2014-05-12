@@ -13,7 +13,7 @@ var english = {welcome:'Welcome',
                 mimer:'Mimer english'
 };
 var chinese = {welcome:'欢迎',
-                currency:'RMB',
+                currency:'¥',
                 description:'你好',
                 search:'搜索',
                 madicken:'Madicken chinese',

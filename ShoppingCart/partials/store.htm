@@ -41,17 +41,17 @@
     </div>
  
     <div class="list-bottom">
-        <div class="list-top">
+        <div class="list-top-inner">
             <div class="list-left">
                 <div class="itemname">
                 <a id="art_50341_D22302" class="itemnamelink" href="#/products/{{product.sku}}">{{product.name}}</a>
                 </div>
             </div>
             <div class="list-right">
-                <p>has colors </p>
-            </div>
+                <div class="item_text">Finns i flera färger <br>Stl. {{product.sizes[0]}}-{{product.sizes[product.sizes.length-1]}}</div>
         </div>
-        <div class="list-bottom">
+        </div>
+        <div class="list-bottom-inner">
             <div class="list-left">
             <span class="price">{{product.price | currency:lang.currency}}</span>
             </div>
@@ -63,4 +63,3 @@
     </div>
     </div>
 </div>
-

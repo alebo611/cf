@@ -11,7 +11,7 @@
 //
 function store($http) {
 
-
+/*
     $http({method: 'GET', url: '/cakephp/shoes/getAllForSale.json'}).
     success(function(data, status, headers, config) {
         this.shoes = data;
@@ -27,6 +27,7 @@ function store($http) {
       // called asynchronously if an error occurs
       // or server returns response with an error status.
     });
+    */
     
 
 
