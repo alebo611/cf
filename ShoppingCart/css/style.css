@@ -159,9 +159,9 @@
 }
 
 .images {
-    width:210
-    height:150
-    position:relative
+    width:210px;
+    height:150px;
+    position:relative;
     }
 
 .listview_window .item_text {
