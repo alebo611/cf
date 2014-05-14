@@ -18,9 +18,14 @@
     
 }
 
+
+.list_holder {
+    width:800px;
+    float:left;
+}
 .list-row {
-    background:#f4f4f4;
-    display:inline-block;
+    background:#ffffff;
+    float:left;
     border:0px;}
 
 .list-top {
