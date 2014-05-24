@@ -22,6 +22,7 @@ var storeApp = angular.module('AngularStore', []).
       });
 }]);
 
+
 // create a data service that provides a store and a shopping cart that
 // will be shared by all views (instead of creating fresh ones for each view).
 storeApp.factory("DataService", function ($http) {

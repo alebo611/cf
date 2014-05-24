@@ -163,13 +163,16 @@
     position:relative;
     }
 
-.listview_window .item_text {
-    font-size: 10px;
+.many_colors {
+    background: url('/ShoppingCart/img/colors.png') no-repeat scroll 0% 0% / 18px 12px transparent;
     padding: 0px 0px 0px 23px;
     position: relative;
     top: 4px;
     float: right;
+}
+
+.listview_window .item_text {
+    font-size: 10px;
     text-align: right;
-    background: url('/ShoppingCart/img/colors.png') no-repeat scroll 0% 0% / 18px 7px transparent;
-    line-height: 10px;
+    line-height: 16px;
 }
