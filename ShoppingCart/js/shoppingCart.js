@@ -6,6 +6,8 @@ function shoppingCart(cartName) {
     this.clearCart = false;
     this.checkoutParameters = {};
     this.items = [];
+    //this.lismail = 'linli781@gmail.com';
+    this.lismail = 'linli781-facilitator@gmail.com'; // test account
 
     // load items from local storage when initializing
     this.loadItems();
@@ -178,6 +180,8 @@ shoppingCart.prototype.checkoutPayPal = function (parms, clearCart) {
         data["item_name_" + ctr] = item.name;
         data["quantity_" + ctr] = item.quantity;
         data["amount_" + ctr] = item.price.toFixed(2);
+        data["business"] = this.lismail;
+        data["currency_code"] = 'SEK';
     }
 
     // build form
