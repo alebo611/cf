@@ -1,3 +1,6 @@
+
+var currencies = ['SEK','USB','EUR','RMB','JPY'];
+
 var swedish = {welcome:'Välkommen',
                 description:'Detta är en produkt',
                 currency:'SEK',

@@ -180,6 +180,10 @@ shoppingCart.prototype.checkoutPayPal = function (parms, clearCart) {
         data["item_name_" + ctr] = item.name;
         data["quantity_" + ctr] = item.quantity;
         data["amount_" + ctr] = item.price.toFixed(2);
+        data["on0_" + ctr] = "size";
+        data["os0_" + ctr] = item.size;
+        data["on1_" + ctr] = "color";
+        data["os1_" + ctr] = item.color;
         data["business"] = this.lismail;
         data["currency_code"] = 'SEK';
     }

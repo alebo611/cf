@@ -17,6 +17,9 @@ function storeController($scope, $routeParams, DataService) {
     }
 
     var chosenLang=localStorage['language']
+    var chosenCurrency=localStorage['currency']
+
+    
 
     if (chosenLang){
         if(chosenLang=='swedish'){
@@ -33,6 +36,13 @@ function storeController($scope, $routeParams, DataService) {
         $scope.lang=swedish;
     }
 
+    if (chosenCurrency){
+        $scope.currency=chosenCurrency;
+    }
+    else {
+        $scope.currency='SEK';
+    }
+
     $scope.changeLanguage = function(language) {
         if(language=='swedish'){
             this.lang=swedish;
@@ -44,5 +54,10 @@ function storeController($scope, $routeParams, DataService) {
             this.lang=chinese;
         }
         localStorage['language']=language;
+    };
+
+    $scope.changeCurrency = function(currency) {
+        this.currency=currency;
+        localStorage['currency']=currency;
     };
 }
