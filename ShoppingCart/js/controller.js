@@ -8,6 +8,7 @@ function storeController($scope, $routeParams, DataService) {
     // get store and cart from service
     $scope.store = DataService.store;
     $scope.cart = DataService.cart;
+    $scope.currencies = allCurrencies;
 
     // use routing to pick the selected product
     if ($routeParams.productSku != null) {
@@ -16,8 +17,8 @@ function storeController($scope, $routeParams, DataService) {
         $scope.chosenColor = $scope.product.colors[0];
     }
 
-    var chosenLang=localStorage['language']
-    var chosenCurrency=localStorage['currency']
+    var chosenLang=localStorage['language'];
+    var chosenCurrency=localStorage['chosenCurrency'];
 
     
 
@@ -37,11 +38,16 @@ function storeController($scope, $routeParams, DataService) {
     }
 
     if (chosenCurrency){
-        $scope.currency=chosenCurrency;
+        $scope.curra=allCurrencies[chosenCurrency];
     }
     else {
-        $scope.currency='SEK';
+        $scope.curra=allCurrencies.sek;
     }
+  $scope.changeCurrency = function(newlyChosenCurrency) {
+        //this.curra=allCurrencies[newlyChosenCurrency];
+        this.curra=allCurrencies[newlyChosenCurrency];
+        localStorage['chosenCurrency']=newlyChosenCurrency;
+    };
 
     $scope.changeLanguage = function(language) {
         if(language=='swedish'){
@@ -56,8 +62,5 @@ function storeController($scope, $routeParams, DataService) {
         localStorage['language']=language;
     };
 
-    $scope.changeCurrency = function(currency) {
-        this.currency=currency;
-        localStorage['currency']=currency;
-    };
+  
 }

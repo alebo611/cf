@@ -14,10 +14,11 @@
         </td>
     </tr>
 </table>
-hejhej
+
 <div ng-repeat="currency in currencies">
-            <a href="" ng-click="changeCurrency({{currency}})">{{currency}}</a>
+            <a href="" ng-click="changeCurrency(currency.name)">{{currency.display}}</a>
 </div>
+{{curra.name}}
 
 <table class="table table-bordered">
     <tr class="well">

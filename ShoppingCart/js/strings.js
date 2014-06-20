@@ -1,5 +1,11 @@
 
-var currencies = ['SEK','USB','EUR','RMB','JPY'];
+//rate is always against kronor
+allCurrencies = {
+         sek : {name:'sek',abb:'SEK', display:'SEK', rate:1.0 },
+         euro : {name:'euro',abb:'EUR', display:'€', rate:0.2 },
+         dollar : {name:'dollar',abb:'USD', display:'$', rate:0.4 }
+            };
+
 
 var swedish = {welcome:'Välkommen',
                 description:'Detta är en produkt',
