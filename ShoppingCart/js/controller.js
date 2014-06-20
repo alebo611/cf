@@ -45,19 +45,19 @@ function storeController($scope, $routeParams, DataService) {
     }
   $scope.changeCurrency = function(newlyChosenCurrency) {
         //this.curra=allCurrencies[newlyChosenCurrency];
-        this.curra=allCurrencies[newlyChosenCurrency];
+        $scope.curra=allCurrencies[newlyChosenCurrency];
         localStorage['chosenCurrency']=newlyChosenCurrency;
     };
 
     $scope.changeLanguage = function(language) {
         if(language=='swedish'){
-            this.lang=swedish;
+            $scope.lang=swedish;
         }
         if(language=='english'){
-            this.lang=english;
+            $scope.lang=english;
         }
         if(language=='chinese'){
-            this.lang=chinese;
+            $scope.lang=chinese;
         }
         localStorage['language']=language;
     };
