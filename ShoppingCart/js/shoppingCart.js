@@ -185,7 +185,7 @@ shoppingCart.prototype.checkoutPayPal = function (parms, clearCart) {
         data["on1_" + ctr] = "color";
         data["os1_" + ctr] = item.color;
         data["business"] = this.lismail;
-        data["currency_code"] = allCurrencies[localStorage['chosenCurrency']];
+        data["currency_code"] = allCurrencies[localStorage['chosenCurrency']].abb;
     }
 
     // build form
