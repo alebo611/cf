@@ -186,14 +186,12 @@
 /* block top currencies */
 
 #currencies_block_top {
-   margin-left: 800px;
-    position: absolute;
-    top: 40px;
 }
 #currencies_block_top li {
-	float: left;
+	float: right;
 	margin-right: 0.2em;
-	margin-bottom: 2px
+	margin-bottom: 2px;
+    list-style: none outside none;
 }
 #currencies_block_top a {
   background-color: #FFFFFF;
@@ -207,6 +205,7 @@
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
+    display: inline;
 }
 #currencies_block_top a:hover {
 	background-color: #F2F2F2;

@@ -11,17 +11,19 @@
             <a href="" ng-click="changeLanguage('english')"><img src="img/flags/United_Kingdom.jpg" width="50"></a>
             <a href="" ng-click="changeLanguage('swedish')"><img src="img/flags/Sweden.jpg" width="40"></a>
             <a href="" ng-click="changeLanguage('chinese')"><img src="img/flags/China.jpg" width="38"></a>
+
         </td>
+            <div id="currencies_block_top" >
+                        <ul ng-repeat="currency in currencies">
+                            <li ng-class="curra==currency ? 'selected' : ''"> 
+                            <a href="" title="gurra" ng-click="changeCurrency(currency.name)">{{currency.display}}</a>
+                            </li>
+                        </ul>
+            </div>
     </tr>
+
 </table>
 
-<div id="currencies_block_top" >
-            <ul ng-repeat="currency in currencies">
-                <li ng-class="curra==currency ? 'selected' : ''"> 
-                <a href="" title="gurra" ng-click="changeCurrency(currency.name)">{{currency.display}}</a>
-                </li>
-            </ul>
-</div>
 
 <table class="table table-bordered">
     <tr class="well">
