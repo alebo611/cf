@@ -30,7 +30,7 @@
         <td class="tdRight" colspan="4" >
             <a href="default.htm#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
                 <i class="icon-shopping-cart" />
-                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() * curra.rate | currency: curra.display}}</b>
             </a>
         </td>
     </tr>

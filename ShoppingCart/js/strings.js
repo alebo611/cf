@@ -4,7 +4,8 @@ allCurrencies = {
          sek : {name:'sek',abb:'SEK', display:'SEK', rate:1.0 },
          euro : {name:'euro',abb:'EUR', display:'€', rate:0.109466346 },
          dollar : {name:'dollar',abb:'USD', display:'$', rate:0.14886 },
-         renminbi : {name:'renminbi',abb:'USD', display:'RMB', rate:1.0 }
+         renminbi : {name:'renminbi',abb:'USD', display:'RMB', rate:1.0 },
+         yen : {name:'yen',abb:'JPY', display:'JPY', rate:15.1944473 }
             };
 
 
