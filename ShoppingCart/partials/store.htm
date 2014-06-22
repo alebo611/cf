@@ -15,9 +15,9 @@
     </tr>
 </table>
 
-<div id="setCurrency" >
+<div id="currencies_block_top" >
             <ul ng-repeat="currency in currencies">
-                <li class="selected">
+                <li ng-class="curra==currency ? 'selected' : ''"> 
                 <a href="" title="gurra" ng-click="changeCurrency(currency.name)">{{currency.display}}</a>
                 </li>
             </ul>
