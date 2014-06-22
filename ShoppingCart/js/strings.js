@@ -1,9 +1,10 @@
 
-//rate is always against kronor
+//rate is always against kronor. Key and name must be the same
 allCurrencies = {
          sek : {name:'sek',abb:'SEK', display:'SEK', rate:1.0 },
-         euro : {name:'euro',abb:'EUR', display:'€', rate:0.2 },
-         dollar : {name:'dollar',abb:'USD', display:'$', rate:0.4 }
+         euro : {name:'euro',abb:'EUR', display:'€', rate:0.109466346 },
+         dollar : {name:'dollar',abb:'USD', display:'$', rate:0.14886 },
+         renminbi : {name:'renminbi',abb:'USD', display:'RMB', rate:1.0 }
             };
 
 

@@ -15,10 +15,13 @@
     </tr>
 </table>
 
-<div ng-repeat="currency in currencies">
-            <a href="" ng-click="changeCurrency(currency.name)">{{currency.display}}</a>
+<div id="setCurrency" >
+            <ul ng-repeat="currency in currencies">
+                <li class="selected">
+                <a href="" title="gurra" ng-click="changeCurrency(currency.name)">{{currency.display}}</a>
+                </li>
+            </ul>
 </div>
-{{curra.name}}
 
 <table class="table table-bordered">
     <tr class="well">
@@ -59,7 +62,7 @@
         </div>
         <div class="list-bottom-inner">
             <div class="list-left">
-            <span class="price">{{product.price | currency:lang.currency}}</span>
+            <span class="price">{{product.price * curra.rate | currency:curra.display}}</span>
             </div>
             <div class="list-right">
                 <a class="button choose" href="#/products/{{product.sku}}">Välj</a>
