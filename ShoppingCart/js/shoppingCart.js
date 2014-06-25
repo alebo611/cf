@@ -171,6 +171,7 @@ shoppingCart.prototype.checkoutPayPal = function (parms, clearCart) {
         rm: "2",
         charset: "utf-8"
     };
+    var curra=allCurrencies[localStorage['chosenCurrency']];
 
     // item data
     for (var i = 0; i < this.items.length; i++) {
@@ -179,13 +180,13 @@ shoppingCart.prototype.checkoutPayPal = function (parms, clearCart) {
         data["item_number_" + ctr] = item.sku;
         data["item_name_" + ctr] = item.name;
         data["quantity_" + ctr] = item.quantity;
-        data["amount_" + ctr] = item.price.toFixed(2);
+        data["amount_" + ctr] = (item.price * curra.rate).toFixed(2);
         data["on0_" + ctr] = "size";
         data["os0_" + ctr] = item.size;
         data["on1_" + ctr] = "color";
         data["os1_" + ctr] = item.color;
         data["business"] = this.lismail;
-        data["currency_code"] = allCurrencies[localStorage['chosenCurrency']].abb;
+        data["currency_code"] = curra.abb;
     }
 
     // build form
