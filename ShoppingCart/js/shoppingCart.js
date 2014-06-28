@@ -59,7 +59,7 @@ shoppingCart.prototype.addItem = function (sku, name, price, quantity, size, col
         var found = false;
         for (var i = 0; i < this.items.length && !found; i++) {
             var item = this.items[i];
-            if (item.sku == sku) {
+            if (item.sku == sku && item.size == size && item.color == color) {
                 found = true;
                 item.quantity = this.toNumber(item.quantity + quantity);
                 if (item.quantity <= 0) {

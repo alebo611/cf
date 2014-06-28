@@ -39,11 +39,11 @@
                         <button 
                             class="btn btn-success" type="button" 
                             ng-disabled="item.quantity >= 1000"
-                            ng-click="cart.addItem(item.sku, item.name, item.price * curra.rate, +1)">+</button>
+                            ng-click="cart.addItem(item.sku, item.name, item.price * curra.rate, +1, item.size, item.color)">+</button>
                         <button 
                             class="btn btn-inverse" type="button" 
                             ng-disabled="item.quantity <= 1"
-                            ng-click="cart.addItem(item.sku, item.name, item.price * curra.rate, -1)">-</button>
+                            ng-click="cart.addItem(item.sku, item.name, item.price * curra.rate, -1, item.size, item.color)">-</button>
                       </div>
                     </td>
                     <td class="tdRight">{{item.price * curra.rate * item.quantity | currency:curra.display}}</td>
