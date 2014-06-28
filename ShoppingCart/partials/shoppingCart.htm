@@ -101,6 +101,12 @@
                     ng-disabled="cart.getTotalCount() < 1">
                     <i class="icon-ok icon-white" /> check out using Stripe
                 </button>
+                <button 
+                    class="btn btn-block btn-primary" 
+                    ng-click="cart.checkout('Alipay')" 
+                    ng-disabled="cart.getTotalCount() < 1">
+                    <i class="icon-ok icon-white" /> check out using Alipay
+                </button>
             </p>
                 <!-- Stripe needs a form to post to -->
                 <form class="form-stripe"></form>
@@ -119,6 +125,12 @@
                     ng-click="cart.checkout('Google')" 
                     ng-disabled="cart.getTotalCount() < 1" >
                     <img src="https://checkout.google.com/buttons/checkout.gif?w=168&h=44&style=white&variant=text" alt="checkoutGoogle"/>
+                </button>    
+                <button 
+                    class="btn btn-block btn-link" 
+                    ng-click="cart.checkout('Alipay')" 
+                    ng-disabled="cart.getTotalCount() < 1" >
+                    <img src="img/alipay.png" alt="checkoutAlipay"/>
                 </button>    
             </p>
         </div>

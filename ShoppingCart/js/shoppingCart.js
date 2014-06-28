@@ -113,8 +113,8 @@ shoppingCart.prototype.clearItems = function () {
 shoppingCart.prototype.addCheckoutParameters = function (serviceName, merchantID, options) {
 
     // check parameters
-    if (serviceName != "PayPal" && serviceName != "Google" && serviceName != "Stripe") {
-        throw "serviceName must be 'PayPal' or 'Google' or 'Stripe'.";
+    if (serviceName != "PayPal" && serviceName != "Google" && serviceName != "Stripe" && serviceName != "Alipay") {
+        throw "serviceName must be 'PayPal' or 'Google' or 'Stripe' or 'Alipay'.";
     }
     if (merchantID == null) {
         throw "A merchantID is required in order to checkout.";
@@ -152,6 +152,9 @@ shoppingCart.prototype.checkout = function (serviceName, clearCart) {
             break;
         case "Stripe":
             this.checkoutStripe(parms, clearCart);
+            break;
+        case "Alipay":
+            this.checkoutAlipay(parms, clearCart);
             break;
         default:
             throw "Unknown checkout service: " + parms.serviceName;
@@ -310,6 +313,52 @@ shoppingCart.prototype.checkoutStripe = function (parms, clearCart) {
         panelLabel: 'Checkout',
         token: token
     });
+}
+
+/*
+Example: https://mapi.alipay.com/cooperate/gateway.do?total_fee=13&currency=USD&notify_url=http%3A%2F%2Fwww.tabao.com&service=create_forex_trade&agent=2088002007018916&partner=2088002007018916&out_trade_no=16177126201&subject=42560013718&return_url=http%3A%2F%2Fwww.tabao.com&body=71819701647&sign=UzZ7bRelBtSVB63jsfI9vbu3d21442SJV88po0XvIptqWGM4rxP5EQ%3D%3D&sign_type=DSA
+*/
+shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
+
+    // global data
+    var data = {
+        cmd: "_cart",
+        business: parms.merchantID,
+        upload: "1",
+        rm: "2",
+        charset: "utf-8"
+    };
+    var curra=allCurrencies[localStorage['chosenCurrency']];
+
+    // item data
+    for (var i = 0; i < this.items.length; i++) {
+        var item = this.items[i];
+        var ctr = i + 1;
+        data["item_number_" + ctr] = item.sku;
+        data["item_name_" + ctr] = item.name;
+        data["quantity_" + ctr] = item.quantity;
+        data["amount_" + ctr] = (item.price * curra.rate).toFixed(2);
+        data["on0_" + ctr] = "size";
+        data["os0_" + ctr] = item.size;
+        data["on1_" + ctr] = "color";
+        data["os1_" + ctr] = item.color;
+        data["business"] = this.lismail;
+        data["currency_code"] = curra.abb;
+    }
+
+    // build form
+    var form = $('<form/></form>');
+    form.attr("action", "https://www.paypal.com/cgi-bin/webscr");
+    form.attr("method", "POST");
+    form.attr("style", "display:none;");
+    this.addFormFields(form, data);
+    this.addFormFields(form, parms.options);
+    $("body").append(form);
+
+    // submit form
+    this.clearCart = clearCart == null || clearCart;
+    form.submit();
+    form.remove();
 }
 
 // utility methods
