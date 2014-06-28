@@ -48,7 +48,7 @@
                     </td>
                     <td class="tdRight">{{item.price * curra.rate * item.quantity | currency:curra.display}}</td>
                     <td class="tdCenter" title="remove from cart">
-                        <a href="" ng-click="cart.addItem(item.sku, item.name, item.price, -10000000)" >
+                        <a href="" ng-click="cart.addItem(item.sku, item.name, item.price, -10000000, item.size, item.color)" >
                             <i class="icon-remove" />
                         </a>
                     </td>
