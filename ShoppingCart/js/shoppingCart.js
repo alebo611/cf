@@ -332,9 +332,10 @@ shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
         sign_type: "MD5",
         out_trade_no:"4403648718928911",
         partner:"2088101122136241",
-        notify_url:"http%3A%2F%2Fapi.test.alipay.net%2Fatinterface%2Freceive_notify.htm",
+        notify_url:"http://api.test.alipay.net/atinterface/receive_notify.htm",
         sendFormat:"normal",
-        return_url:"https%3A%2F%2Fdevmobile.inicis.com%2Fsmart%2Ftestmall%2Freturn_url_test.php%3FOID%3D20131008414885731",
+        return_url:"https://devmobile.inicis.com/smart/testmall/return_url_test.php?OID=20131008414885731",
+        //sign:"760bdzec6y9goq7ctyx96ezkz78287de",
         sign:"22a0b5d9fcfa4c4b2633c787aefcb2cc",
         _input_charset:"UTF-8",
         service:"create_forex_trade",
@@ -344,19 +345,21 @@ https://mapi.alipay.net/gateway.do?body=test&
 
     var curra=allCurrencies[localStorage['chosenCurrency']];
 
-    // item data
+    //goods=sku,name,quantity,price,size,color;...
+    var goods="";
     for (var i = 0; i < this.items.length; i++) {
         var item = this.items[i];
-        var ctr = i + 1;
-        data["item_number_" + ctr] = item.sku;
-        data["item_name_" + ctr] = item.name;
-        data["quantity_" + ctr] = item.quantity;
-        data["total_fee" + ctr] = (item.price * curra.rate).toFixed(2);
-        data["on0_" + ctr] = "size";
-        data["os0_" + ctr] = item.size;
-        data["on1_" + ctr] = "color";
-        data["os1_" + ctr] = item.color;
+        
+        //goods=sku,name,quantity,price,size,color;...
+        goods += item.sku;
+        goods += ","+item.name;
+        goods += ","+item.quantity;
+        goods += ","+(item.price * curra.rate).toFixed(2);
+        goods += ","+item.size;
+        goods += ","+item.color;
+        goods += ";";
     }
+        data["goods"] = goods;
         data["currency"] = curra.abb;
         data["total_fee"] = this.getTotalPrice();
 
@@ -366,7 +369,7 @@ https://mapi.alipay.net/gateway.do?body=test&
     form.attr("method", "POST");
     form.attr("style", "display:none;");
     this.addFormFields(form, data);
-    this.addFormFields(form, parms.options);
+    //this.addFormFields(form, parms.options);
     $("body").append(form);
 
     // submit form
