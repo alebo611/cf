@@ -317,7 +317,11 @@ shoppingCart.prototype.checkoutStripe = function (parms, clearCart) {
 }
 
 /*
-Prod Example: https://mapi.alipay.com/cooperate/gateway.do?total_fee=13&currency=USD&notify_url=http%3A%2F%2Fwww.tabao.com&service=create_forex_trade&agent=2088002007018916&partner=2088002007018916&out_trade_no=16177126201&subject=42560013718&return_url=http%3A%2F%2Fwww.tabao.com&body=71819701647&sign=UzZ7bRelBtSVB63jsfI9vbu3d21442SJV88po0XvIptqWGM4rxP5EQ%3D%3D&sign_type=DSA
+Prod Examples: https://mapi.alipay.com/cooperate/gateway.do?total_fee=13&currency=USD&notify_url=http%3A%2F%2Fwww.tabao.com&service=create_forex_trade&agent=2088002007018916&partner=2088002007018916&out_trade_no=16177126201&subject=42560013718&return_url=http%3A%2F%2Fwww.tabao.com&body=71819701647&sign=UzZ7bRelBtSVB63jsfI9vbu3d21442SJV88po0XvIptqWGM4rxP5EQ%3D%3D&sign_type=DSA
+
+CREATE_ACTIVE_PAY_BY_USER (only RMB in china)
+https://mapi.aliPay.com/gateway.do?_input_ charset=UTF-8&body=Science+Fiction&notify_url=https%3A%2F%2Falipay.cybersource.com&out_trade_no=12345678901234567890123456789012&partner=2088201564874474&payment_type=1&return_url=http%3A%2F%2Flocalhost%2Fpay%2Falipay_return.jsp&seller_email=alipay-test%40alipay.com&service=
+create_direct_pay_by_user&subject=Book&total_fee=0.01&sign=989338fdb4babc91fdf43a53f718991b&sign_type=MD5
 
 Test example: http://mapi.alipay.net/gateway.do?body=test&subject=test&sign_type=MD5&out_trade_no=4403648718928911&currency=USD&total_fee=0.1&partner=2088101122136241&notify_url=http%3A%2F%2Fapi.test.alipay.net%2Fatinterface%2Freceive_notify.htm&sendFormat=normal&return_url=https%3A%2F%2Fdevmobile.inicis.com%2Fsmart%2Ftestmall%2Freturn_url_test.php%3FOID%3D20131008414885731&sign=22a0b5d9fcfa4c4b2633c787aefcb2cc&_input_charset=UTF-8&service=create_forex_trade
 
@@ -332,9 +336,9 @@ shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
         sign_type: "MD5",
         out_trade_no:"4403648718928911",
         partner:"2088101122136241",
-        notify_url:"http://api.test.alipay.net/atinterface/receive_notify.htm",
+        notify_url:"http://localhost:8888/ShoppingCart/receive_notify.html",
         sendFormat:"normal",
-        return_url:"https://devmobile.inicis.com/smart/testmall/return_url_test.php?OID=20131008414885731",
+        return_url:"http://localhost:8888/cf/plainphp/return_test.php?OID=20131008414885731",
         //sign:"760bdzec6y9goq7ctyx96ezkz78287de",
         sign:"22a0b5d9fcfa4c4b2633c787aefcb2cc",
         _input_charset:"UTF-8",
@@ -365,7 +369,9 @@ https://mapi.alipay.net/gateway.do?body=test&
 
     // build form
     var form = $('<form/></form>');
-    form.attr("action", "https://mapi.alipay.net/gateway.do");
+    form.attr("action", "http://localhost:8888/apsim/"); //own test
+    //form.attr("action", "https://mapi.alipay.net/gateway.do"); //alipay test
+    //form.attr("action", "https://mapi.alipay.com/gateway.do"); //alipay prod
     form.attr("method", "POST");
     form.attr("style", "display:none;");
     this.addFormFields(form, data);
