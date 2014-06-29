@@ -67,6 +67,15 @@ storeApp.factory("DataService", function ($http) {
         }
     );
 
+    myCart.addCheckoutParameters("Alipay", "2088101122136241",
+        {
+            Key: "760bdzec6y9goq7ctyx96ezkz78287de",
+
+        }
+    );
+    localStorage['language'] = "english"; // default language
+    localStorage['chosenCurrency'] = "sek"; // default currency
+
     // return data object with store and cart
     return {
         store: myStore,

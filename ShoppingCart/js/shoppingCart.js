@@ -188,9 +188,10 @@ shoppingCart.prototype.checkoutPayPal = function (parms, clearCart) {
         data["os0_" + ctr] = item.size;
         data["on1_" + ctr] = "color";
         data["os1_" + ctr] = item.color;
-        data["business"] = this.lismail;
-        data["currency_code"] = curra.abb;
     }
+
+    data["business"] = this.lismail;
+    data["currency_code"] = curra.abb;
 
     // build form
     var form = $('<form/></form>');
@@ -316,18 +317,31 @@ shoppingCart.prototype.checkoutStripe = function (parms, clearCart) {
 }
 
 /*
-Example: https://mapi.alipay.com/cooperate/gateway.do?total_fee=13&currency=USD&notify_url=http%3A%2F%2Fwww.tabao.com&service=create_forex_trade&agent=2088002007018916&partner=2088002007018916&out_trade_no=16177126201&subject=42560013718&return_url=http%3A%2F%2Fwww.tabao.com&body=71819701647&sign=UzZ7bRelBtSVB63jsfI9vbu3d21442SJV88po0XvIptqWGM4rxP5EQ%3D%3D&sign_type=DSA
+Prod Example: https://mapi.alipay.com/cooperate/gateway.do?total_fee=13&currency=USD&notify_url=http%3A%2F%2Fwww.tabao.com&service=create_forex_trade&agent=2088002007018916&partner=2088002007018916&out_trade_no=16177126201&subject=42560013718&return_url=http%3A%2F%2Fwww.tabao.com&body=71819701647&sign=UzZ7bRelBtSVB63jsfI9vbu3d21442SJV88po0XvIptqWGM4rxP5EQ%3D%3D&sign_type=DSA
+
+Test example: http://mapi.alipay.net/gateway.do?body=test&subject=test&sign_type=MD5&out_trade_no=4403648718928911&currency=USD&total_fee=0.1&partner=2088101122136241&notify_url=http%3A%2F%2Fapi.test.alipay.net%2Fatinterface%2Freceive_notify.htm&sendFormat=normal&return_url=https%3A%2F%2Fdevmobile.inicis.com%2Fsmart%2Ftestmall%2Freturn_url_test.php%3FOID%3D20131008414885731&sign=22a0b5d9fcfa4c4b2633c787aefcb2cc&_input_charset=UTF-8&service=create_forex_trade
+
+https://mapi.alipay.net/gateway.do?body=test&subject=test&sign_type=MD5&out_trade_no=4403648718928911&currency=USD&total_fee=0.1&partner=2088101122136241&notify_url=http%3A%2F%2Fapi.test.alipay.net%2Fatinterface%2Freceive_notify.htm&sendFormat=normal&return_url=https%3A%2F%2Fdevmobile.inicis.com%2Fsmart%2Ftestmall%2Freturn_url_test.php%3FOID%3D20131008414885731&sign=22a0b5d9fcfa4c4b2633c787aefcb2cc&_input_charset=UTF-8&service=create_forex_trade
 */
 shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
 
     // global data
     var data = {
-        cmd: "_cart",
-        business: parms.merchantID,
-        upload: "1",
-        rm: "2",
-        charset: "utf-8"
+        body: "test",
+        subject:"test",
+        sign_type: "MD5",
+        out_trade_no:"4403648718928911",
+        partner:"2088101122136241",
+        notify_url:"http%3A%2F%2Fapi.test.alipay.net%2Fatinterface%2Freceive_notify.htm",
+        sendFormat:"normal",
+        return_url:"https%3A%2F%2Fdevmobile.inicis.com%2Fsmart%2Ftestmall%2Freturn_url_test.php%3FOID%3D20131008414885731",
+        sign:"22a0b5d9fcfa4c4b2633c787aefcb2cc",
+        _input_charset:"UTF-8",
+        service:"create_forex_trade",
     };
+
+https://mapi.alipay.net/gateway.do?body=test&
+
     var curra=allCurrencies[localStorage['chosenCurrency']];
 
     // item data
@@ -337,18 +351,18 @@ shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
         data["item_number_" + ctr] = item.sku;
         data["item_name_" + ctr] = item.name;
         data["quantity_" + ctr] = item.quantity;
-        data["amount_" + ctr] = (item.price * curra.rate).toFixed(2);
+        data["total_fee" + ctr] = (item.price * curra.rate).toFixed(2);
         data["on0_" + ctr] = "size";
         data["os0_" + ctr] = item.size;
         data["on1_" + ctr] = "color";
         data["os1_" + ctr] = item.color;
-        data["business"] = this.lismail;
-        data["currency_code"] = curra.abb;
     }
+        data["currency"] = curra.abb;
+        data["total_fee"] = this.getTotalPrice();
 
     // build form
     var form = $('<form/></form>');
-    form.attr("action", "https://www.paypal.com/cgi-bin/webscr");
+    form.attr("action", "https://mapi.alipay.net/gateway.do");
     form.attr("method", "POST");
     form.attr("style", "display:none;");
     this.addFormFields(form, data);
