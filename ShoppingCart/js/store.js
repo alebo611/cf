@@ -32,13 +32,13 @@ function store($http) {
 
 
     this.products = [
-        new product("99841", "Madicken", 'madicken', 649,  [20,21,25,26,27],["green","cerise","yellow","blue","red"]),
-        new product("93541", "Mimer", 'mimer', 10, [19,26,27,33,36],["brown","blue","red"]),
-        new product("65041", "Alvin", 'alvin', 699, [19,26,27,33,36],["blue","red"]),
-        new product("99641", "Maja", 'maja', 699, [19,26,27,33,36],["light-brown"]),
-        new product("92341", "Amanda", 'amanda', 699, [19,26,27,33,36],["light-brown","red"]),
-        new product("10041", "Anders", 'anders', 699, [19,26,27,33,36],["blue","red"]),
-        new product("66841", "Molly", 'molly', 699, [19,26,27,33,36],["white","red"])
+        new product("99841", "madicken", 'madicken', 649,  [20,21,25,26,27],["green","cerise","yellow","blue","red"]),
+        new product("93541", "mimer", 'mimer', 10, [19,26,27,33,36],["brown","blue","red"]),
+        new product("65041", "alvin", 'alvin', 699, [19,26,27,33,36],["blue","red"]),
+        new product("99641", "maja", 'maja', 699, [19,26,27,33,36],["light-brown"]),
+        new product("92341", "amanda", 'amanda', 699, [19,26,27,33,36],["light-brown","red"]),
+        new product("10041", "anders", 'anders', 699, [19,26,27,33,36],["blue","red"]),
+        new product("66841", "molly", 'molly', 699, [19,26,27,33,36],["white","red"])
 
 
 /*

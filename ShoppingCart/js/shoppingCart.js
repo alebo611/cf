@@ -8,6 +8,7 @@ function shoppingCart(cartName) {
     this.items = [];
     //this.lismail = 'linli781@gmail.com';
     this.lismail = 'linli781-facilitator@gmail.com'; // test account
+    this.baseurl = 'http://php-alebo.rhcloud.com' //openshift test
 
     // load items from local storage when initializing
     this.loadItems();
@@ -328,6 +329,7 @@ Test example: http://mapi.alipay.net/gateway.do?body=test&subject=test&sign_type
 https://mapi.alipay.net/gateway.do?body=test&subject=test&sign_type=MD5&out_trade_no=4403648718928911&currency=USD&total_fee=0.1&partner=2088101122136241&notify_url=http%3A%2F%2Fapi.test.alipay.net%2Fatinterface%2Freceive_notify.htm&sendFormat=normal&return_url=https%3A%2F%2Fdevmobile.inicis.com%2Fsmart%2Ftestmall%2Freturn_url_test.php%3FOID%3D20131008414885731&sign=22a0b5d9fcfa4c4b2633c787aefcb2cc&_input_charset=UTF-8&service=create_forex_trade
 */
 shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
+    
 
     // global data
     var data = {
@@ -336,9 +338,9 @@ shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
         sign_type: "MD5",
         out_trade_no:"4403648718928911",
         partner:"2088101122136241",
-        notify_url:"http://localhost:8888/cf/plainphp/receive_notify.html",
+        notify_url:this.baseurl+"/plainphp/receive_notify.html",
         sendFormat:"normal",
-        return_url:"http://localhost:8888/cf/plainphp/return_test.php?OID=20131008414885731",
+        return_url:this.baseurl+"/plainphp/return_test.php?OID=20131008414885731",
         //sign:"760bdzec6y9goq7ctyx96ezkz78287de",
         sign:"22a0b5d9fcfa4c4b2633c787aefcb2cc",
         _input_charset:"UTF-8",
