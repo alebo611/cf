@@ -371,8 +371,8 @@ shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
 
     // build form
     var form = $('<form/></form>');
-    form.attr("action", "http://localhost:8888/apsim/"); //own test
-    //form.attr("action", "https://mapi.alipay.net/gateway.do"); //alipay test
+    //form.attr("action", "http://localhost:8888/apsim/"); //own test
+    form.attr("action", "http://mapi.alipay.net/gateway.do"); //alipay test
     //form.attr("action", "https://mapi.alipay.com/gateway.do"); //alipay prod
     form.attr("method", "POST");
     form.attr("style", "display:none;");
