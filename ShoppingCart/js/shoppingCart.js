@@ -336,7 +336,7 @@ shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
         sign_type: "MD5",
         out_trade_no:"4403648718928911",
         partner:"2088101122136241",
-        notify_url:"http://localhost:8888/ShoppingCart/receive_notify.html",
+        notify_url:"http://localhost:8888/cf/plainphp/receive_notify.html",
         sendFormat:"normal",
         return_url:"http://localhost:8888/cf/plainphp/return_test.php?OID=20131008414885731",
         //sign:"760bdzec6y9goq7ctyx96ezkz78287de",
@@ -345,7 +345,7 @@ shoppingCart.prototype.checkoutAlipay = function (parms, clearCart) {
         service:"create_forex_trade",
     };
 
-https://mapi.alipay.net/gateway.do?body=test&
+//https://mapi.alipay.net/gateway.do?body=test&
 
     var curra=allCurrencies[localStorage['chosenCurrency']];
 
